@@ -1,0 +1,77 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-06-28 00:54:17 --> Severity: Notice --> Undefined variable: title E:\xampp\htdocs\cyfety\application\modules\register\views\header.php 5
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:17 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:18 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:54:19 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> Severity: Notice --> Undefined variable: title E:\xampp\htdocs\cyfety\application\modules\register\views\header.php 5
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:40 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 00:55:41 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> Severity: Notice --> Undefined variable: title E:\xampp\htdocs\cyfety\application\modules\register\views\header.php 5
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:09 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-06-28 02:40:19 --> Severity: Notice --> Undefined variable: title E:\xampp\htdocs\cyfety\application\modules\register\views\header.php 5
