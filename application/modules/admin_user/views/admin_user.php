@@ -15,11 +15,6 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
-        <!-- <?php if($this->session->flashdata('pesan') !== null): ?>
-              <div class="alert alert-success"> 
-                <?= $this->session->flashdata('pesan'); ?>
-              </div>
-            <?php endif;?> -->
       </section>
 
       <!-- Main content -->
@@ -29,33 +24,34 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Daftar Artikel</h3>
+                  <h3 class="card-title">Daftar User</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <a href="<?= base_url('tambah_artikel'); ?>" class="btn btn-primary">Tambah Artikel</a><br><br>
+                  <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                      Tambah User
+                    </button><br><br>
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                       <tr>
                         <th>No</th>
-                        <th>Judul Artikel</th>
-                        <th>Tanggal</th>
-                        <th>Dilihat</th>
+                        <th>Username</th>
+                        <th>Email</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $no = 1; foreach($artikel as $art): ?>
+                      <?php $no = 1; foreach($user as $us): ?>
                       <tr>
                         <td><?= $no++ ?></td>
-                        <td><?= $art->judul ?></td>
-                        <td><?= $art->tanggal ?></td>
-                        <td><?= $art->dilihat ?></td>
+                        <td><?= $us->name ?></td>
+                        <td><?= $us->email ?></td>
                         <td>
-                          <a onclick='return confirm("Yakin ingin menghapus artikel tersebut?")' class="btn btn-danger"
-                            href="<?= base_url('admin_artikel/hapus_artikel/'.$art->id) ?>">Hapus</a>
+                          <a onclick='return confirm("Yakin ingin menghapus user tersebut?")' class="btn btn-danger"
+                            href="<?= base_url('admin_user/hapus_user/'.$us->id) ?>">Hapus</a>
                           <!--<a class="btn btn-warning" href="<?= base_url('ke_edit/artikel/'.$art->id) ?>">Edit</a>-->
-                          <a class="btn btn-warning" href="<?= base_url('admin_artikel/edit_art/'.$art->id) ?>">Edit</a>
+                          <a class="btn btn-warning" href="<?= base_url('admin_artikel/edit_art/'.$us->id) ?>">Edit</a>
                         </td>
                       </tr>
                       <?php endforeach; ?>
@@ -63,9 +59,8 @@
                     <tfoot>
                       <tr>
                         <th>No</th>
-                        <th>Judul Artikel</th>
-                        <th>Tanggal</th>
-                        <th>Dilihat</th>
+                        <th>Username</th>
+                        <th>Email</th>
                         <th>Aksi</th>
                       </tr>
                     </tfoot>
@@ -78,6 +73,46 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <?= form_open('admin_user/tambah_data'); ?>
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Tambah User</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Username</label>
+                    <input name="name" type="text" class="form-control" placeholder="Username">
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                    <input name="email" type="text" class="form-control"
+                      placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                  <label>Password</label>
+                    <input name="password" type="password" class="form-control"
+                      placeholder="Password">
+                </div>
+              </div> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <button type="submit" class="btn btn-primary">Tambah User</button>
+            </div>
+            <?= form_close(); ?>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->

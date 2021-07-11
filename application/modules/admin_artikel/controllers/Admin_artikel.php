@@ -40,6 +40,8 @@ class Admin_artikel extends MY_Controller {
 	
 	public function edit_art($id){
 		$data['artikel'] = $this->M_admin_artikel->get_where($id)->row();
+		//$where = array('id' => $id);
+
 		$this->load->view('admin_header');
 		$this->load->view('admin_navbar');
 		$this->load->view('edit_artikel', $data);
@@ -47,8 +49,9 @@ class Admin_artikel extends MY_Controller {
 	}
 	
 	public function update($id){
-		if($this->input->post('gambar') !== null): //jika ingin engubah thumbnail
-		//upload
+		if($this->input->post('gambar') !== null): //jika ingin mengubah thumbnail
+			
+			//upload
 			$config['upload_path']		= './assets/thumbnail/';
 			$config['allowed_types']	= 'gif|jpg|png|jpeg';
 			$config['max_size']         = 100000000;
@@ -58,31 +61,49 @@ class Admin_artikel extends MY_Controller {
 			$this->load->library('upload', $config);
 			
 			if (!$this->upload->do_upload('gambar')){ //jika upload gagal
+				
 				echo "gagal";
+
 			} else { //jika berhasil
-				$gambar = $this->upload->data();
-				$gambar = $gambar['file_name']; // ngambil filename dari foto tsb
+
+				$data = $this->upload->data();
+				$gambar = $data['file_name']; // ngambil filename dari foto tsb
+				
 			}
+
 		endif;
 		
+		//$where = array(
+		//		'id' => $this->input->post('id')
+		//);
+
 		$slug = str_replace(' ','-', $this->input->post('slug'));
 		
 		if($this->input->post('gambar') !== null): //jika mau ubah thumbnail
-			$data = [
+			$data = array(
 					'judul' 	=> $this->input->post('judul'),
 					'slug' 		=> $slug,
 					'gambar' 	=> $gambar,
-					'isi' 		=> $this->input->post('isi'),
-				];
+					'isi' 		=> $this->input->post('isi')
+				);
 		else: //jika tidak
-			$data = [
+			$data = array(
 					'judul' 	=> $this->input->post('judul'),
 					'slug' 		=> $slug,
-					'isi' 		=> $this->input->post('isi'),
-				];
+					'isi' 		=> $this->input->post('isi')
+				);
 		endif;
-		redirect('admin_artikel');
+
+		//$this->M_admin_artikel->edit($where, $data, 'artikel');
 		
-		$update = $this->M_admin_artikel->update($id, $data);
+		$edit = $this->M_admin_artikel->edit($id, $data);
+
+		if($edit){
+			$this->session->set_flashdata('pesan','Berhasil Mengubah Artikel');
+			redirect('admin_artikel');
+		}else{
+			$this->session->set_flashdata('pesan','Berhasil Mengubah Artikel');
+			redirect('admin_artikel');
+		}
 	}
 }

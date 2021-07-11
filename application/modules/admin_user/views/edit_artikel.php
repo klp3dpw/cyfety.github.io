@@ -28,6 +28,8 @@
               <!-- form start -->
 
               <?= form_open('admin_artikel/update/'.$artikel->id); ?>
+              <!-- <form action="<?= base_url('admin_artikel/update/'.$artikel->id); ?>"> -->
+                <!--<form method="post" action="<?= base_url('admin_artikel/update'); ?>" enctype="multipart/form-data">-->
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Judul</label>

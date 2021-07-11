@@ -1,20 +1,20 @@
 <?php
-class M_admin_artikel extends CI_Model {
+class M_admin_user extends CI_Model {
 	public function get() {
-        return $this->db->get('artikel');
+        return $this->db->get('user');
+	}
+
+	public function tambah_data($data){
+		return $this->db->insert('user', $data);
 	}
 	
 	public function get_where($id) {
-        return $this->db->get_where('artikel', array('id' => $id));
+        return $this->db->get_where('user', array('id' => $id));
 	}
 	
-	public function get_slug($slug) {
-        return $this->db->get_where('artikel', array('slug' => $slug));
-	}
-	
-	public function hapus_artikel($id){
+	public function hapus_user($id){
 		$this->db->where('id', $id);
-		return $this->db->delete('artikel');
+		return $this->db->delete('user');
 	}
 	
 	public function edit($id, $data){

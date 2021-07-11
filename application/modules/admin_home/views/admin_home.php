@@ -27,7 +27,7 @@
                 <div class="inner">
                   <h3>Artikel</h3>
                 </div>
-                <a href="admin_artikel" class="small-box-footer">
+                <a href="<?= base_url('admin_artikel') ?>" class="small-box-footer">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
@@ -38,7 +38,7 @@
                 <div class="inner">
                   <h3>User</h3>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="<?= base_url('admin_user') ?>" class="small-box-footer">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>

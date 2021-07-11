@@ -23,7 +23,7 @@ class Kronologi extends MY_Controller {
             //$data['tindakan']=$this->input->post('tindakan');
             $response=$this->M_kronologi->saverecords($data);
             if($response==true){
-                redirect('beranda');
+                redirect('platform');
             }
 		}
 	}
