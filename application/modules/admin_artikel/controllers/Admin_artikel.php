@@ -10,6 +10,8 @@ class Admin_artikel extends MY_Controller {
 
 	public function index(){
 		$data['artikel']=$this->M_admin_artikel->get()->result();
+		$this->load->view('admin_header');
+		$this->load->view('admin_navbar');
 		$this->load->view('admin_artikel', $data);
 	}
 	
@@ -28,6 +30,7 @@ class Admin_artikel extends MY_Controller {
 		
 		//hapus data di database
 		$hapus = $this->M_admin_artikel->hapus_artikel($id);
+		redirect('admin_artikel');
 	}
 	
 	//public function edit_artikel(){
@@ -37,7 +40,10 @@ class Admin_artikel extends MY_Controller {
 	
 	public function edit_art($id){
 		$data['artikel'] = $this->M_admin_artikel->get_where($id)->row();
+		$this->load->view('admin_header');
+		$this->load->view('admin_navbar');
 		$this->load->view('edit_artikel', $data);
+		$this->load->view('admin_footer');
 	}
 	
 	public function update($id){
