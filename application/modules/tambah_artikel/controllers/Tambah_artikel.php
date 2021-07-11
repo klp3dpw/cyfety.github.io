@@ -9,7 +9,10 @@ class Tambah_artikel extends MY_Controller {
     }
 	
 	public function index(){
+		$this->load->view('admin_header');
+		$this->load->view('admin_navbar');
 		$this->load->view('tambah_artikel');
+		$this->load->view('admin_footer');
 	}
 	
 	public function tambah_data(){
