@@ -29,7 +29,7 @@
                 <!-- /.card-header -->
                 <div class="card-body">
                   <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_user">
                       Tambah User
                     </button><br><br>
                   <table id="example2" class="table table-bordered table-hover">
@@ -38,6 +38,7 @@
                         <th>No</th>
                         <th>Username</th>
                         <th>Email</th>
+                        <th>Role_id</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
@@ -47,11 +48,15 @@
                         <td><?= $no++ ?></td>
                         <td><?= $us->name ?></td>
                         <td><?= $us->email ?></td>
+                        <td><?= $us->role_id ?></td>
                         <td>
                           <a onclick='return confirm("Yakin ingin menghapus user tersebut?")' class="btn btn-danger"
                             href="<?= base_url('admin_user/hapus_user/'.$us->id) ?>">Hapus</a>
-                          <!--<a class="btn btn-warning" href="<?= base_url('ke_edit/artikel/'.$art->id) ?>">Edit</a>-->
-                          <a class="btn btn-warning" href="<?= base_url('admin_artikel/edit_art/'.$us->id) ?>">Edit</a>
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit_user">
+                            Edit
+                          </button>
+                          <!-- <a class="btn btn-warning" href="<?= base_url('admin_artikel/edit_art/'.$us->id) ?>">Edit</a> -->
                         </td>
                       </tr>
                       <?php endforeach; ?>
@@ -61,6 +66,7 @@
                         <th>No</th>
                         <th>Username</th>
                         <th>Email</th>
+                        <th>Role_id</th>
                         <th>Aksi</th>
                       </tr>
                     </tfoot>
@@ -74,8 +80,8 @@
         </div>
       </section>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <!-- Modal Tambah User-->
+      <div class="modal fade" id="tambah_user" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
           <div class="modal-content">
             <?= form_open('admin_user/tambah_data'); ?>
@@ -87,6 +93,14 @@
             </div>
             <div class="modal-body">
               <div class="card-body">
+                <div class="form-group">
+                  <label>Role</label><br>
+                    <select  name="role_id" class="form-select" aria-label="Default select example">
+                     <option value="1">Admin</option>
+                      <option value="2">User</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                   <label>Username</label>
                     <input name="name" type="text" class="form-control" placeholder="Username">
@@ -113,6 +127,7 @@
           </div>
         </div>
       </div>
+    <!-- Akhir Modal Tambah User -->
     </div>
 
     <!-- footer -->

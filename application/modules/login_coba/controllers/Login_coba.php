@@ -1,29 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_login extends MY_Controller {
+class Login_coba extends MY_Controller {
 	public function index(){
-		$this->load->view('admin_login');
+		$this->load->view('Login_coba');
 	}
 	
-	public function adm_login(){
+	public function cek_login(){
 		$this->load->library('session');
-		$this->load->model('M_admin_login');
+		$this->load->model('M_login_coba');
 
-		$username = $this->input->post('username');
+		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 
-		$cek = $this->M_admin_login->cek_db($username, $password)->num_rows();
-		$data = $this->M_admin_login->cek_db($username, $password)->row();
+		$cek = $this->M_login_coba->cek_db($email, $password)->num_rows();
+		$data = $this->M_login_coba->cek_db($email, $password)->row();
 		if($cek > 0){
 			$this->session->set_userdata($sess);
 			if($data->role_id === "1"){
 				$role_id = 'admin';
 
 				$sess = array(
-					'name' => $data->username,
+					'email' => $data->email,
 					'role_id' => $role_id
-					
 				);
 
 				$this->session->set_userdata($sess);
@@ -33,16 +32,15 @@ class Admin_login extends MY_Controller {
 				$role_id = 'member';
 				
 				$sess = array(
-					'name' => $data->username,
+					'email' => $data->email,
 					'role_id' => $role_id
-					
 				);
 				$this->session->set_userdata($sess);
 				redirect('beranda');
 			}
 		}else{
 			$this->session->set_flashdata('pesan','Username dan Password salah');
-			redirect('admin_login');
+			redirect('login_coba');
 		}
 	}
 }

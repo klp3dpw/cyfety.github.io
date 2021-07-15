@@ -49,21 +49,29 @@
 									</p>
 								</div>
 							</div>
-							<form action="beranda" class="signin-form">
-								<div class="form-group mb-3">
-									<label class="label" for="name">Username</label>
-									<input type="text" class="form-control" placeholder="Username" required>
-								</div>
-								<div class="form-group mb-3">
-									<label class="label" for="password">Password</label>
-									<input type="password" class="form-control" placeholder="Password" required>
-								</div>
-								<div class="form-group">
-									<button type="submit" class="form-control btn btn-primary submit px-3">Sign
-										In</button>
+
+								<div class="card-body">
+									<?= form_open('login/cek_login'); ?>
+									<?php if($this->session->flashdata('pesan') !== null): ?>
+										<div class="alert alert-danger"> 
+											<?= $this->session->flashdata('pesan'); ?>
+										</div>
+									<?php endif;?>
+										<div class="form-group mb-3">
+											<label class="label" for="username" name="username">Username</label>
+											<input type="text" class="form-control" name="username "placeholder="Username" required>
+										</div>
+										<div class="form-group mb-3">
+											<label class="label" for="password" name="password">Password</label>
+											<input type="password" class="form-control" name="password" placeholder="Password" required>
+										</div>
+										<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+									<?= form_close(); ?>
 								</div>
 						</div>
-						</form>
+						<!-- </form> -->
+
+
 					</div>
 				</div>
 			</div>

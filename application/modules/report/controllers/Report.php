@@ -7,4 +7,47 @@ class Report extends MY_Controller {
 		$this->load->view('report');
 		$this->load->view('footer');
 	}
-}
+
+	public function __construct() {
+        parent::__construct();
+        $this->load->database();
+        $this->load->model('M_report');
+    }
+
+    public function tambah_data(){
+	    $nama 				= $this->input->post('nama');
+	    $alamat 			= $this->input->post('alamat');
+	    $jenis_kelamin 		= $this->input->post('jenis_kelamin');
+	    $tgl_lahir			= $this->input->post('tgl_lahir');
+	    $no_hp 				= $this->input->post('no_hp');
+	    $email 				= $this->input->post('email');
+	    $kronologi 			= $this->input->post('kronologi');
+	    $tindakan 			= $this->input->post('tindakan');
+	    $platform 			= $this->input->post('platform');
+	    $postingan_ada		= $this->input->post('postingan_ada');
+	    $username_user		= $this->input->post('username_user');
+	    $username_pelaku	= $this->input->post('username_pelaku');
+	    $link 				= $this->input->post('link');
+
+	    $data = array(
+	    	'nama' => $nama,
+	    	'alamat' => $alamat,
+	    	'jenis_kelamin' => $jenis_kelamin,
+	    	'tgl_lahir' => $tgl_lahir,
+	    	'no_hp' => $no_hp,
+	    	'email' => $email,
+	    	'kronologi' => $kronologi,
+	    	'tindakan' => implode(",", $tindakan),
+	    	'platform' => $platform,
+	    	'postingan_ada' => $postingan_ada,
+	    	'username_user' => $username_user,
+	    	'username_pelaku' => $username_pelaku,
+	    	'link' => $link
+	    );
+
+     	$insert = $this->M_report->tambah_data($data);
+     	$this->session->set_flashdata('pesan','Terima kasih! Laporan anda telah terkirim!');
+     	redirect('report');
+
+     }
+ }

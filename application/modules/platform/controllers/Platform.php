@@ -7,7 +7,7 @@ class Platform extends MY_Controller {
 		$this->load->view('platform');
 		$this->load->view('footer');
 	}
-	 public function __construct() {
+	public function __construct() {
         parent::__construct();
         $this->load->database();
         $this->load->model('M_platform');

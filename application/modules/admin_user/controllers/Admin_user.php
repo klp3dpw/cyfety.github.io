@@ -19,6 +19,7 @@ class Admin_user extends MY_Controller {
 		$data = array(
 			'name' => $this->input->post('name'),
 			'email' => $this->input->post('email'),
+			'role_id' => $this->input->post('role_id'),
 			'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT)
 		);
 
