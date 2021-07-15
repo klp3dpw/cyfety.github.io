@@ -49,7 +49,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="<?= base_url('beranda'); ?>">Beranda</a></li>
-          <li><a href="<?= base_url('biodata'); ?>">Report</a></li>
+          <li><a href="<?= base_url('report'); ?>">Report</a></li>
           <li><a href="<?= base_url('artikel'); ?>">Artikel</a></li>
           <li><a href="<?= base_url('login'); ?>" class="getstarted">Log In</a></li>
         </ul>
