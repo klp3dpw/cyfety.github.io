@@ -52,11 +52,6 @@
                         <td>
                           <a onclick='return confirm("Yakin ingin menghapus user tersebut?")' class="btn btn-danger"
                             href="<?= base_url('admin_user/hapus_user/'.$us->id) ?>">Hapus</a>
-                          <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit_user">
-                            Edit
-                          </button>
-                          <!-- <a class="btn btn-warning" href="<?= base_url('admin_artikel/edit_art/'.$us->id) ?>">Edit</a> -->
                         </td>
                       </tr>
                       <?php endforeach; ?>

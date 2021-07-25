@@ -16,7 +16,6 @@ class Admin_login extends MY_Controller {
 		$cek = $this->M_admin_login->cek_db($username, $password)->num_rows();
 		$data = $this->M_admin_login->cek_db($username, $password)->row();
 		if($cek > 0){
-			$this->session->set_userdata($sess);
 			if($data->role_id === "1"){
 				$role_id = 'admin';
 
