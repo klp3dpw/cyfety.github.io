@@ -58,7 +58,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="admin_artikel" class="nav-link">
+              <a href="admin_report" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>Report</p>
               </a>
