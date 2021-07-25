@@ -43,7 +43,7 @@ class Beranda extends MY_Controller {
 			$cookie = array (
 				"name"		=> $slug,
 				"value"		=> "$ip",
-				"expire"	=> time() + 300, //1 jam
+				"expire"	=> time() + 7200, //1 jam
 				"secure"	=> false
 			);
 		//set cookie dan update jumlah views

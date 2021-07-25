@@ -51,7 +51,11 @@
           <li><a href="<?= base_url('beranda'); ?>">Beranda</a></li>
           <li><a href="<?= base_url('report'); ?>">Report</a></li>
           <li><a href="<?= base_url('artikel'); ?>">Artikel</a></li>
+          <?php if ($this->session->has_userdata('email')) { ?>
+          <li><a href="<?= base_url('login'); ?>" class="getstarted">Sign Out</a></li>
+            <?php } else { ?>
           <li><a href="<?= base_url('login'); ?>" class="getstarted">Log In</a></li>
+          <?php } ?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

@@ -229,3 +229,32 @@ FROM `artikel`
 ORDER BY RAND()
  LIMIT 3
 ERROR - 2021-07-04 10:32:50 --> Severity: error --> Exception: Call to a member function result() on boolean E:\xampp\htdocs\cyfety\application\controllers\Beranda.php 19
+ERROR - 2021-07-04 13:24:30 --> Severity: Warning --> mysqli::query(): (HY000/6): Error on delete of 'E:\xampp\tmp\#sql2c104_205_0.MAD' (Errcode: 13 &quot;Permission denied&quot;) E:\xampp\htdocs\cyfety\system\database\drivers\mysqli\mysqli_driver.php 221
+ERROR - 2021-07-04 13:24:30 --> Query error: Error on delete of 'E:\xampp\tmp\#sql2c104_205_0.MAD' (Errcode: 13 "Permission denied") - Invalid query: SELECT *
+FROM `artikel`
+ORDER BY RAND()
+ LIMIT 3
+ERROR - 2021-07-04 13:24:30 --> Severity: error --> Exception: Call to a member function result() on boolean E:\xampp\htdocs\cyfety\application\controllers\Beranda.php 19
+ERROR - 2021-07-04 13:26:59 --> Severity: Notice --> Undefined variable: title E:\xampp\htdocs\cyfety\application\modules\register\views\header.php 5
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:26:59 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:27:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 13:51:09 --> 404 Page Not Found: /index
