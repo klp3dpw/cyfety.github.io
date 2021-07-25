@@ -37,11 +37,11 @@
                       placeholder="Judul Artikel" value="<?= $artikel->judul ?>">
                   </div>
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Slug</label>
                     <input name="slug" type="text" class="form-control" placeholder="Slug Artikel"
                       value="<?= $artikel->slug ?>">
-                  </div>
+                  </div> -->
 
                   <div class="row mb-3">
                     <div class="col-md-3">

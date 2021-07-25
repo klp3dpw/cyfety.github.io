@@ -33,8 +33,7 @@ class Tambah_artikel extends MY_Controller {
 			//$data = $this->upload->data();
 			//$filename = $data['file_name'];
 			
-			//$slug = str_replace(' ','-', $this->input->post('slug'));
-			$slug = preg_replace('/[^a-zA-Z0-9]/', '-', $this->input->post('judul'));
+			$slug = str_replace(' ','-', $this->input->post('slug'));
 			
 			$data = [
 				'judul' 	=> $this->input->post('judul'),

@@ -77,7 +77,8 @@ class Admin_artikel extends MY_Controller {
 		//		'id' => $this->input->post('id')
 		//);
 
-		$slug = str_replace(' ','-', $this->input->post('slug'));
+		//$slug = str_replace(' ','-', $this->input->post('slug'));
+		$slug = preg_replace('/[^a-zA-Z0-9]/', '-', $this->input->post('judul'));
 		
 		if($this->input->post('gambar') !== null): //jika mau ubah thumbnail
 			$data = array(

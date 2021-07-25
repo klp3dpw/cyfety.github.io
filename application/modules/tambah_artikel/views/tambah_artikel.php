@@ -33,10 +33,10 @@
                     <input name="judul" type="text" class="form-control" id="exampleInputEmail1"
                       placeholder="Judul Artikel">
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Slug</label>
                     <input name="slug" type="text" class="form-control" placeholder="Slug Artikel">
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <label class="form-label w-100">Thumbnail</label>
                     <input type="file" name="gambar">

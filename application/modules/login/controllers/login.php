@@ -1,52 +1,65 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends MY_Controller {
-	public function index(){
-		$this->load->view('login');
-	}
+class login extends MY_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
 
-	public function login_user(){
-		$this->load->view('login_user');
-	}
-	
-	public function cek_login(){
-		$this->load->library('session');
-		$this->load->model('M_login');
+        $this->load->library('form_validation');
+    }
+    public function index()
+    {
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        
+        if ($this->form_validation->run()==false) {
+            $this->load->view('login');
 
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+        } else {
+            // Validasi
+            $this->_login();
+        }
+    }
 
-		$cek = $this->M_login->cek_db($username, $password)->num_rows();
-		$data = $this->M_login->cek_db($username, $password)->row();
-		if($cek > 0){
-			$this->session->set_userdata($sess);
-			if($data->role_id === "1"){
-				$role_id = 'admin';
+    private function _login()
+    {
+        $email =  $this->input->post('email');
+        $password =  $this->input->post('password');
 
-				$sess = array(
-					'name' => $data->username,
-					'role_id' => $role_id,
-					'user_id' => $data->id 
-				);
+        $user = $this->db->get_where('user', ['email' => $email])->row_array(); 
+        if ($user) { //ada user
+            //if user active
+            if ($user['is_active'] == 1) {
+                //cek password
+                if (password_verify($password, $user['password'])) {
+                    $data = [
+                        'email' => $user['email'],
+                        'role' => $user['role']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('Beranda');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                    Wrong password</div>');
+                    redirect('login');
+                }
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                    Your email has not been activated</div>');
+                redirect('login');
+            }
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                Email belum terdaftar</div>');
+            redirect('login');
+        }
+    }
 
-				$this->session->set_userdata($sess);
-				redirect('admin_home');
-			}
-			elseif($data->role_id === "2"){
-				$role_id = 'member';
-				
-				$sess = array(
-					'name' => $data->username,
-					'role_id' => $role_id,
-					'user_id' => $data->id 
-				);
-				$this->session->set_userdata($sess);
-				redirect('beranda');
-			}
-		}else{
-			$this->session->set_flashdata('pesan','Username dan Password salah');
-			redirect('login');
-		}
-	}
+        public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('Beranda');
+    }
 }
